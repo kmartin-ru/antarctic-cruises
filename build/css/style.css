@@ -610,9 +610,9 @@ button,
 
 .container {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1366px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 103px;
 }
 
 .btn {
@@ -751,6 +751,21 @@ button,
   pointer-events: auto;
 }
 
+.page-header {
+  min-height: 650px;
+  background-color: #3d70ab;
+}
+
+.main-nav__logo {
+  width: 70px;
+  height: 38px;
+  fill: #F9FBFD;
+}
+
+.advantages svg {
+  fill: #011C40;
+}
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
@@ -765,21 +780,24 @@ button,
   }
 }
 
-@media (max-width: 1439px) {
+@media (max-width: 1279px) {
   .container {
-    padding: 0 32px;
+    padding: 0 45px;
   }
-}
 
-@media (max-width: 1023px) {
-  .container {
-    padding: 0 24px;
+  .page-header {
+    min-height: 638px;
+  }
+
+  .main-nav__logo {
+    width: 38px;
+    height: 20px;
   }
 }
 
 @media (max-width: 767px) {
   .container {
-    padding: 0 16px;
+    padding: 0 15px;
   }
 
   .modal__wrapper {
@@ -793,5 +811,14 @@ button,
 
   .modal--fit-content .modal__content {
     width: 100%;
+  }
+
+  .page-header {
+    min-height: 500px;
+  }
+
+  .main-nav__logo {
+    width: 44px;
+    height: 22px;
   }
 }

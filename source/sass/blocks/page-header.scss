@@ -1,0 +1,13 @@
+.page-header {
+  min-height: 650px;
+
+  background-color: $color-lochmara;
+
+  @include vp-1279 {
+    min-height: 638px;
+  }
+
+  @include vp-767 {
+    min-height: 500px;
+  }
+}
