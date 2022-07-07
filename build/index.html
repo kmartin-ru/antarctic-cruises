@@ -7,6 +7,10 @@
     <meta name="description" content="Описание проекта">
     <title>Круизы в Антарктику</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/Montserrat-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   </head>
   <body>
     <div class="wrapper">
@@ -41,11 +45,11 @@
       </header>
       <main class="page-content">
         <section class="about  section">
-          <h2 class="visually-hidden">О круизе</h2>
+          <h2 class="visually-hidden">О круизах</h2>
           <div class="container">
             <div class="about__content">
               <div class="about__info">
-                <p>Путешествие на край Земли</p>
+                <b>Путешествие на край Земли</b>
                 <p>Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</p>
               </div>
               <img src="https://via.placeholder.com/560x301" width="560" height="301" alt="Компания из трех пингвинов">
@@ -299,6 +303,7 @@
                 <p>Забронируйте тур за 3-6 месяцев до даты выезда и сэкономьте до 50%</p>
               </div>
               <form class="booking__form  booking-form" action="https://echo.htmlacademy.ru" method="post">
+                <p>Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
                 <div class="booking-form__field">
                   <label class="visually-hidden" for="user-name">Имя</label>
                   <input id="user-name" type="text" name="name" placeholder="Имя" required>
@@ -354,16 +359,16 @@
             </svg>
             <ul class="nav">
               <li class="nav__item">
-                <a href="#" class="nav__link">Преимущества</a>
+                <a href="#" class="nav__link  nav__link--page-footer">Преимущества</a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link">Направления</a>
+                <a href="#" class="nav__link  nav__link--page-footer">Направления</a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link">Ближайшие круизы</a>
+                <a href="#" class="nav__link  nav__link--page-footer">Ближайшие круизы</a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link">Контакты</a>
+                <a href="#" class="nav__link  nav__link--page-footer">Контакты</a>
               </li>
             </ul>
             <ul class="socials">

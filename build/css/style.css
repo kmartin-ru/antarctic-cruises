@@ -387,9 +387,33 @@ template {
 @font-face {
   font-style: normal;
   font-weight: 400;
-  font-family: "";
+  font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/.woff2") format("woff2"), url("../fonts/.woff") format("woff");
+  src: local("Montserrat"), url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Montserrat";
+  font-display: swap;
+  src: local("Montserrat"), url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 600;
+  font-family: "Montserrat";
+  font-display: swap;
+  src: local("Montserrat"), url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Montserrat";
+  font-display: swap;
+  src: local("Montserrat"), url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
 }
 
 *,
@@ -621,8 +645,12 @@ button,
   display: inline-flex;
   margin: 10px 0;
   padding: 10px 20px;
-  color: #ffffff;
-  background-color: #2c39f2;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #011C40;
+  background-color: #F9FBFD;
   border: none;
   cursor: pointer;
   -webkit-transition: opacity 0.3s ease;
@@ -756,14 +784,251 @@ button,
   background-color: #3d70ab;
 }
 
-.main-nav__logo {
+.logo {
   width: 70px;
   height: 38px;
   fill: #F9FBFD;
 }
 
-.advantages svg {
+.nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #F9FBFD;
+}
+
+.page-intro h1 {
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 66px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #F9FBFD;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.page-intro p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #F9FBFD;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.about {
+  background-color: #F9FBFD;
+}
+
+.about__info b {
+  display: block;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #011C40;
+}
+
+.about__info p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #011C40;
+}
+
+.advantages {
+  background-color: #d8e5f4;
+}
+
+.advantages__content ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.advantages__content svg {
   fill: #011C40;
+}
+
+.advantages__content h3 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #011C40;
+}
+
+.advantages__content p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #011C40;
+}
+
+.section h2 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #011C40;
+}
+
+.routes {
+  background-color: #F9FBFD;
+}
+
+.route__info {
+  color: #F9FBFD;
+  background-color: #011C40;
+}
+
+.route__info h3 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #F9FBFD;
+}
+
+.route__info tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.route__info tr *:first-child {
+  font-weight: 500;
+  color: #F9FBFD;
+}
+
+.route__info td {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #D8D8D9;
+}
+
+.booking {
+  background-color: #abd4fa;
+}
+
+.booking__info h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #011C40;
+}
+
+.booking__info > p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #011C40;
+}
+
+.booking-form {
+  background-color: #011C40;
+}
+
+.booking-form > p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #F9FBFD;
+}
+
+.booking-form__field {
+  margin-bottom: 20px;
+}
+
+.booking-form__field input {
+  height: 43px;
+  padding: 11px 16px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #011C40;
+  border: none;
+}
+
+.booking-form__field input::-webkit-input-placeholder {
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.booking-form__field input::-moz-placeholder {
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.booking-form__field input:-ms-input-placeholder {
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.booking-form__field input::-ms-input-placeholder {
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.booking-form__field input::placeholder {
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.booking-form__checkbox label {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #F9FBFD;
+  cursor: pointer;
+}
+
+.contacts {
+  background-color: #F9FBFD;
+}
+
+.contacts__info p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #011C40;
+}
+
+.contacts__info a {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #011C40;
+}
+
+.page-footer {
+  background-color: #011C40;
+}
+
+.socials {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.socials svg {
+  fill: #F9FBFD;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
@@ -789,9 +1054,50 @@ button,
     min-height: 638px;
   }
 
-  .main-nav__logo {
+  .logo {
     width: 38px;
     height: 20px;
+  }
+
+  .nav__link {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .nav__link--page-footer {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .page-intro h1 {
+    font-size: 50px;
+    line-height: 61px;
+    text-shadow: none;
+  }
+
+  .page-intro p {
+    font-size: 18px;
+    line-height: 22px;
+    text-shadow: none;
+  }
+
+  .about__info b {
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  .advantages__content h3 {
+    line-height: 25px;
+  }
+
+  .section h2 {
+    font-size: 26px;
+    line-height: 36px;
+  }
+
+  .booking__info h2 {
+    font-size: 34px;
+    line-height: 51px;
   }
 }
 
@@ -817,8 +1123,57 @@ button,
     min-height: 500px;
   }
 
-  .main-nav__logo {
-    width: 44px;
+  .logo {
+    width: 42px;
     height: 22px;
+  }
+
+  .nav__link {
+    font-size: 18px;
+    line-height: 22px;
+    color: #011C40;
+  }
+
+  .nav__link--page-footer {
+    font-size: 12px;
+    line-height: 15px;
+    color: #F9FBFD;
+  }
+
+  .page-intro h1 {
+    font-size: 36px;
+    line-height: 45px;
+  }
+
+  .page-intro p {
+    font-size: 16px;
+  }
+
+  .about__info b {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .section h2 {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .booking__info h2 {
+    font-size: 24px;
+    line-height: 31px;
+  }
+
+  .booking__info > p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .booking-form > p {
+    line-height: 25px;
+  }
+
+  .booking-form__checkbox label {
+    line-height: 12px;
   }
 }

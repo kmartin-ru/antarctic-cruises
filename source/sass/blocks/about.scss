@@ -1,1 +1,31 @@
-//
+.about {
+  background-color: $color-alice-blue;
+}
+
+.about__info b {
+  display: block;
+
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: $color-tangaroa;
+
+  @include vp-1279 {
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  @include vp-767 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.about__info p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: $color-tangaroa;
+}

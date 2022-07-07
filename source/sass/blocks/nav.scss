@@ -1,0 +1,38 @@
+.nav {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.nav__link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: $color-alice-blue;
+
+  @include vp-1279 {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  @include vp-767 {
+    font-size: 18px;
+    line-height: 22px;
+    color: $color-tangaroa;
+  }
+}
+
+.nav__link--page-footer {
+  @include vp-1279 {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  @include vp-767 {
+    font-size: 12px;
+    line-height: 15px;
+    color: $color-alice-blue;
+  }
+}
