@@ -62,11 +62,11 @@
 //   }
 // }
 
-// @mixin vp-1280 {
-//   @media (min-width: $vp-1280) {
-//     @content;
-//   }
-// }
+@mixin vp-1280 {
+  @media (min-width: $vp-1280) {
+    @content;
+  }
+}
 
 // @mixin vp-1440 {
 //   @media (min-width: $vp-1440) {

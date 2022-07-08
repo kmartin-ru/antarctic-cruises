@@ -18,29 +18,29 @@
         <div class="container">
           <div class="page-header__content">
             <nav class="page-nav">
-              <svg class="logo  logo--page-nav" width="70" height="38" aria-hidden="true" focusable="false">
+              <svg class="logo" data-el="to-hide" width="70" height="38" aria-hidden="true" focusable="false">
                 <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
               </svg>
-              <div class="page-nav__menu  menu">
+              <div class="page-nav__menu  menu" data-el="menu">
                 <svg class="logo  logo--menu" width="70" height="38" aria-hidden="true" focusable="false">
                   <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
                 </svg>
                 <ul class="nav  nav--page-header">
                   <li class="nav__item">
-                    <a href="#" class="nav__link">Преимущества</a>
+                    <a href="#advantages" class="nav__link" data-el="menu-link">Преимущества</a>
                   </li>
                   <li class="nav__item">
-                    <a href="#" class="nav__link">Направления</a>
+                    <a href="#about" class="nav__link" data-el="menu-link">Направления</a>
                   </li>
                   <li class="nav__item">
-                    <a href="#" class="nav__link">Ближайшие круизы</a>
+                    <a href="#routes" class="nav__link" data-el="menu-link">Ближайшие круизы</a>
                   </li>
                   <li class="nav__item">
-                    <a href="#" class="nav__link">Контакты</a>
+                    <a href="#contacts" class="nav__link" data-el="menu-link">Контакты</a>
                   </li>
                 </ul>
               </div>
-              <button class="page-nav__toggle  menu-toggle" type="button">
+              <button class="page-nav__toggle  menu-toggle" data-el="menu-button" type="button">
                 <svg class="menu-toggle__open" width="24" height="14">
                   <use xlink:href="img/sprite_auto.svg#icon-menu-open"></use>
                 </svg>
@@ -49,7 +49,7 @@
                 </svg>
               </button>
             </nav>
-            <div class="page-intro">
+            <div class="page-intro" data-el="to-hide">
               <h1>Круизы в&nbsp;Антарктику</h1>
               <p>Волшебный мир айсбергов&nbsp;и&nbsp;пингвинов</p>
             </div>
@@ -57,7 +57,7 @@
         </div>
       </header>
       <main class="page-content">
-        <section class="about  section">
+        <section class="about  section" id="about">
           <h2 class="visually-hidden">О круизах</h2>
           <div class="container">
             <div class="about__content">
@@ -69,7 +69,7 @@
             </div>
           </div>
         </section>
-        <section class="advantages  section">
+        <section class="advantages  section" id="advantages">
           <div class="container">
             <div class="advantages__content">
               <h2>Преимущества</h2>
@@ -99,7 +99,7 @@
             </div>
           </div>
         </section>
-        <section class="routes  section">
+        <section class="routes  section" id="routes">
           <div class="container">
             <div class="routes__content">
               <h2>Ближайшие круизы</h2>
@@ -338,7 +338,7 @@
             </div>
           </div>
         </section>
-        <section class="contacts">
+        <section class="contacts" id="contacts">
           <div class="container">
             <div class="contacts__content">
               <h2 class="visually-hidden">Контакты</h2>

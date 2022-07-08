@@ -1,5 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import './modules/add-menu-toggler';
 
 // ---------------------------------
 
@@ -44,17 +45,3 @@ window.addEventListener('DOMContentLoaded', () => {
 // breakpointChecker();
 
 // используйте .closest(el)
-
-const menu = document.querySelector('.menu');
-const menuToggle = document.querySelector('.menu-toggle');
-const elToHide1 = document.querySelector('.logo--page-nav');
-const elToHide2 = document.querySelector('.page-intro');
-
-const onMenuToggle = () => {
-  menu.classList.toggle('is-open');
-  menuToggle.classList.toggle('is-open');
-  elToHide1.classList.toggle('is-open');
-  elToHide2.classList.toggle('is-open');
-};
-
-menuToggle.addEventListener('click', onMenuToggle);

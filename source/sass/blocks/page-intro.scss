@@ -2,15 +2,9 @@
   padding-right: 95px;
   padding-left: 95px;
 
-  transition: opacity $trans-default;
-
   @include vp-1279 {
     padding: 0;
   }
-}
-
-.page-intro.is-open {
-  opacity: 0;
 }
 
 .page-intro h1 {

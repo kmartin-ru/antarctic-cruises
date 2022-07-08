@@ -3,15 +3,21 @@
 
   background-color: $color-lochmara;
   background-image: url("../img/page-header-desktop.jpg");
-  background-image: image-set(url("../img/page-header-desktop.webp") 1x);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
-  @include vp-1439 {
+  @supports (background-image: image-set(url("../img/page-header-desktop.webp") 1x)) {
+    background-image: image-set(url("../img/page-header-desktop.webp") 1x);
+  }
+
+  @include vp-1280 {
     @include retina {
       background-image: url("../img/page-header-desktop@2x.jpg");
-      background-image: image-set(url("../img/page-header-desktop@2x.webp") 2x);
+
+      @supports (background-image: image-set(url("../img/page-header-desktop@2x.webp") 2x)) {
+        background-image: image-set(url("../img/page-header-desktop@2x.webp") 2x);
+      }
     }
   }
 
@@ -19,11 +25,17 @@
     min-height: 638px;
 
     background-image: url("../img/page-header-tablet.jpg");
-    background-image: image-set(url("../img/page-header-tablet.webp") 1x);
+
+    @supports (background-image: image-set(url("../img/page-header-tablet.webp") 1x)) {
+      background-image: image-set(url("../img/page-header-tablet.webp") 1x);
+    }
 
     @include retina {
       background-image: url("../img/page-header-tablet@2x.jpg");
-      background-image: image-set(url("../img/page-header-tablet@2x.webp") 2x);
+
+      @supports (background-image: image-set(url("../img/page-header-tablet@2x.webp") 1x)) {
+        background-image: image-set(url("../img/page-header-tablet@2x.webp") 1x);
+      }
     }
   }
 
@@ -31,11 +43,17 @@
     min-height: 500px;
 
     background-image: url("../img/page-header-mobile.jpg");
-    background-image: image-set(url("../img/page-header-mobile.webp") 1x);
+
+    @supports (background-image: image-set(url("../img/page-header-mobile.webp") 1x)) {
+      background-image: image-set(url("../img/page-header-mobile.webp") 1x);
+    }
 
     @include retina {
       background-image: url("../img/page-header-mobile@2x.jpg");
-      background-image: image-set(url("../img/page-header-mobile@2x.webp") 2x);
+
+      @supports (background-image: image-set(url("../img/page-header-mobile@2x.webp") 1x)) {
+        background-image: image-set(url("../img/page-header-mobile@2x.webp") 1x);
+      }
     }
   }
 }

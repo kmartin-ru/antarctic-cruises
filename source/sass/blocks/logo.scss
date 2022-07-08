@@ -16,14 +16,6 @@
   }
 }
 
-.logo--page-nav {
-  transition: opacity $trans-default;
-}
-
-.logo--page-nav.is-open {
-  opacity: 0;
-}
-
 .logo--menu {
   display: none;
 
