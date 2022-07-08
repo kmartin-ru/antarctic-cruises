@@ -1,0 +1,46 @@
+.menu-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 54px;
+  height: 62px;
+  margin: 0;
+  padding: 0;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  @include vp-767 {
+    display: flex;
+  }
+}
+
+.menu-toggle.is-open {
+  width: 43px;
+}
+
+.menu-toggle__open {
+  stroke: $color-alice-blue;
+}
+
+.menu-toggle__close {
+  stroke: $color-tangaroa;
+}
+
+.menu-toggle .menu-toggle__close {
+  display: none;
+}
+
+.menu-toggle.is-open .menu-toggle__open {
+  display: none;
+}
+
+.menu-toggle.is-open .menu-toggle__close {
+  display: block;
+}

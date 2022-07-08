@@ -1,5 +1,11 @@
 .about {
   background-color: $color-alice-blue;
+
+  box-shadow: inset 0 4px 4px $color-default-black-25;
+
+  @include vp-1279 {
+    box-shadow: none;
+  }
 }
 
 .about__info b {

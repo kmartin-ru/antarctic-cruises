@@ -1,1 +1,13 @@
-//
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 197px;
+
+  @include vp-1279 {
+    margin-bottom: 216px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 134px;
+  }
+}
