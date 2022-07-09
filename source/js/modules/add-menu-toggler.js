@@ -10,7 +10,7 @@ const menuButton = document.querySelector('[data-el="menu-button"]');
 const menuLinks = document.querySelectorAll('[data-el="menu-link"]');
 const elementsToHide = document.querySelectorAll('[data-el="to-hide"]');
 
-// escape checker
+// esc
 
 const isEscKey = (evt) => {
   return evt.key === 'Escape';
@@ -22,7 +22,7 @@ const onEscKeydown = (evt) => {
   }
 };
 
-// create/remove overlay
+// overlay under menu
 
 const createOverlay = () => {
   const menuOverlay = document.createElement('div');
@@ -49,7 +49,7 @@ const isMenuOpen = () => {
   return menu.classList.contains(OPEN_STATE_CLASS);
 };
 
-// show/hide elements
+// opacity under menu
 
 const showElementsUnderMenu = () => {
   elementsToHide.forEach((el) => {
@@ -63,7 +63,21 @@ const hideElementsUnderMenu = () => {
   });
 };
 
-// show/hide menu
+// focus
+
+const disableFocus = (el) => {
+  el.setAttribute('tabindex', -1);
+};
+
+const enableFocus = (el) => {
+  el.removeAttribute('tabindex');
+
+  window.setTimeout(() => {
+    menuLinks[0].focus();
+  }, 300);
+};
+
+// menu state togglers
 
 const showMenu = () => {
   menu.classList.add(OPEN_STATE_CLASS);
@@ -71,6 +85,10 @@ const showMenu = () => {
   hideElementsUnderMenu();
   document.addEventListener('keydown', onEscKeydown);
   createOverlay();
+
+  menuLinks.forEach((el) => {
+    enableFocus(el);
+  });
 };
 
 const hideMenu = () => {
@@ -79,9 +97,13 @@ const hideMenu = () => {
   showElementsUnderMenu();
   document.removeEventListener('keydown', onEscKeydown);
   removeOverlay();
+
+  menuLinks.forEach((el) => {
+    disableFocus(el);
+  });
 };
 
-// menu listeners
+// listeners
 
 const onMenuButtonClick = () => {
   return isMenuOpen() ? hideMenu() : showMenu();
@@ -99,7 +121,7 @@ const onWindowResize = () => {
   }
 };
 
-// menu listeners in single function
+// listeners in single function
 
 const addMenuListeners = () => {
   menuButton.addEventListener('click', onMenuButtonClick);

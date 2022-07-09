@@ -19,5 +19,7 @@
 }
 
 .menu.is-open {
-  right: 0;
+  @include vp-767 {
+    right: 0;
+  }
 }

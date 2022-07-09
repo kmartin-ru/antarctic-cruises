@@ -27,16 +27,16 @@
                 </svg>
                 <ul class="nav  nav--page-header">
                   <li class="nav__item">
-                    <a href="#advantages" class="nav__link" data-el="menu-link">Преимущества</a>
+                    <a href="#advantages" class="nav__link" data-el="menu-link" tabindex="-1">Преимущества</a>
                   </li>
                   <li class="nav__item">
-                    <a href="#about" class="nav__link" data-el="menu-link">Направления</a>
+                    <a href="#about" class="nav__link" data-el="menu-link" data-tabelement tabindex="-1">Направления</a>
                   </li>
                   <li class="nav__item">
-                    <a href="#routes" class="nav__link" data-el="menu-link">Ближайшие круизы</a>
+                    <a href="#routes" class="nav__link" data-el="menu-link" data-tabelement tabindex="-1">Ближайшие круизы</a>
                   </li>
                   <li class="nav__item">
-                    <a href="#contacts" class="nav__link" data-el="menu-link">Контакты</a>
+                    <a href="#contacts" class="nav__link" data-el="menu-link" data-tabelement tabindex="-1">Контакты</a>
                   </li>
                 </ul>
               </div>
@@ -62,10 +62,13 @@
           <div class="container">
             <div class="about__content">
               <div class="about__info">
-                <b>Путешествие на край Земли</b>
-                <p>Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</p>
+                <b>Путешествие на&nbsp;край&nbsp;Земли</b>
+                <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
               </div>
-              <img src="https://via.placeholder.com/560x301" width="560" height="301" alt="Компания из трех пингвинов">
+              <div class="about__photo">
+                <!-- 1х: 618x384; 2x: 1235x767 -->
+                <img src="img/about.jpg" srcset="img/about@2x.jpg 2x" width="618" height="384" alt="Компания из трех пингвинов">
+              </div>
             </div>
           </div>
         </section>
@@ -75,23 +78,29 @@
               <h2>Преимущества</h2>
               <ul>
                 <li>
-                  <svg width="27" height="32" aria-hidden="true" focusable="false">
-                    <use xlink:href="img/sprite_auto.svg#icon-advantages-1"></use>
-                  </svg>
+                  <div>
+                    <svg width="27" height="32" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite_auto.svg#icon-advantages-1"></use>
+                    </svg>
+                  </div>
                   <h3>Небольшой круизный лайнер</h3>
                   <p>Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума и очередей и даст возможность насладиться видами и природой.</p>
                 </li>
                 <li>
-                  <svg width="38" height="21" aria-hidden="true" focusable="false">
-                    <use xlink:href="img/sprite_auto.svg#icon-advantages-2"></use>
-                  </svg>
+                  <div>
+                    <svg width="38" height="21" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite_auto.svg#icon-advantages-2"></use>
+                    </svg>
+                  </div>
                   <h3>Система все включено</h3>
-                  <p>Все наши круизы работают по системе “Все Включено”. Великолепные блюда и безлимитный бар доступны для вас 24 часа.</p>
+                  <p>Все наши круизы работают по системе &laquo;Все Включено&raquo;. Великолепные блюда и безлимитный бар доступны для вас 24 часа.</p>
                 </li>
                 <li>
-                  <svg width="42" height="15" aria-hidden="true" focusable="false">
-                    <use xlink:href="img/sprite_auto.svg#icon-advantages-3"></use>
-                  </svg>
+                  <div>
+                    <svg width="42" height="15" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite_auto.svg#icon-advantages-3"></use>
+                    </svg>
+                  </div>
                   <h3>Экскурсионные туры на Zodiac</h3>
                   <p>Экскурсионные туры к берегам Антарктиды совершаются на оборудованных лодках типа Zodiac в сопровождении опытных экскурсоводов.</p>
                 </li>

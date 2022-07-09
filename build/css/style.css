@@ -840,10 +840,6 @@ button,
   fill: #011c40;
 }
 
-.menu.is-open {
-  right: 0;
-}
-
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -948,9 +944,31 @@ button,
 }
 
 .about {
+  padding-top: 120px;
+  padding-bottom: 120px;
   background-color: #f9fbfd;
   -webkit-box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
   box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.about__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr -webkit-min-content;
+  -ms-grid-columns: 1fr min-content;
+  grid-template-columns: 1fr -webkit-min-content;
+  grid-template-columns: 1fr min-content;
+  -webkit-column-gap: 88px;
+  -moz-column-gap: 88px;
+  column-gap: 88px;
+}
+
+.about__info {
+  padding-top: 57px;
+}
+
+.about__info *:first-child {
+  margin-bottom: 22px;
 }
 
 .about__info b {
@@ -963,6 +981,7 @@ button,
 }
 
 .about__info p {
+  margin: 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -970,14 +989,72 @@ button,
   color: #011c40;
 }
 
+.about__photo {
+  position: relative;
+  width: 560px;
+  height: 301px;
+  overflow: hidden;
+}
+
+.about__photo img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(calc(-50% - 30px), calc(-50% + 5px)) scale(1.105);
+  -ms-transform: translate(calc(-50% - 30px), calc(-50% + 5px)) scale(1.105);
+  transform: translate(calc(-50% - 30px), calc(-50% + 5px)) scale(1.105);
+}
+
 .advantages {
+  padding-top: 110px;
+  padding-bottom: 120px;
   background-color: #d8e5f4;
+  background-image: url("../img/advantages-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@supports ((background-image: -webkit-image-set(url("../img/advantages-desktop.webp") 1x)) or (background-image: image-set(url("../img/advantages-desktop.webp") 1x))) {
+  .advantages {
+    background-image: -webkit-image-set(url("../img/advantages-desktop.webp") 1x);
+    background-image: image-set(url("../img/advantages-desktop.webp") 1x);
+  }
+}
+
+.advantages__content h2 {
+  margin: 0;
+  margin-bottom: 49px;
+  text-align: center;
 }
 
 .advantages__content ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 40px;
+  -moz-column-gap: 40px;
+  column-gap: 40px;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.advantages__content li {
+  padding: 30px 30px 24px;
+  background-color: #f9fbfd;
+}
+
+.advantages__content div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 32px;
+  margin-bottom: 19px;
 }
 
 .advantages__content svg {
@@ -985,6 +1062,8 @@ button,
 }
 
 .advantages__content h3 {
+  margin: 0;
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
@@ -993,6 +1072,7 @@ button,
 }
 
 .advantages__content p {
+  margin: 0;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -1189,6 +1269,17 @@ button,
       background-image: image-set(url("../img/page-header-desktop@2x.webp") 2x);
     }
 }
+
+  .advantages {
+    background-image: url("../img/advantages-desktop@2x.jpg");
+  }
+
+@supports ((background-image: -webkit-image-set(url("../img/advantages-desktop@2x.webp") 2x)) or (background-image: image-set(url("../img/advantages-desktop@2x.webp") 2x))) {
+    .advantages {
+      background-image: -webkit-image-set(url("../img/advantages-desktop@2x.webp") 2x);
+      background-image: image-set(url("../img/advantages-desktop@2x.webp") 2x);
+    }
+}
 }
 
 @media (max-width: 1279px) {
@@ -1259,13 +1350,82 @@ button,
   }
 
   .about {
+    padding-top: 91px;
+    padding-bottom: 94px;
     -webkit-box-shadow: none;
     box-shadow: none;
   }
 
+  .about__content {
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+  }
+
+  .about__info {
+    padding-top: 0;
+  }
+
+  .about__info *:first-child {
+    margin-bottom: 15px;
+  }
+
   .about__info b {
     font-size: 26px;
-    line-height: 39px;
+    line-height: 36px;
+  }
+
+  .about__photo {
+    width: 324px;
+    height: 264px;
+    -webkit-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+
+  .about__photo img {
+    -webkit-transform: translate(calc(-50% + 7px), calc(-50% - 1px)) scale(1.31);
+    -ms-transform: translate(calc(-50% + 7px), calc(-50% - 1px)) scale(1.31);
+    transform: translate(calc(-50% + 7px), calc(-50% - 1px)) scale(1.31);
+  }
+
+  .advantages {
+    padding-top: 91px;
+    padding-bottom: 100px;
+    background-image: url("../img/advantages-tablet.jpg");
+  }
+
+@supports ((background-image: -webkit-image-set(url("../img/advantages-tablet.webp") 1x)) or (background-image: image-set(url("../img/advantages-tablet.webp") 1x))) {
+    .advantages {
+      background-image: -webkit-image-set(url("../img/advantages-tablet.webp") 1x);
+      background-image: image-set(url("../img/advantages-tablet.webp") 1x);
+    }
+}
+
+  .advantages__content h2 {
+    margin-bottom: 51px;
+  }
+
+  .advantages__content ul {
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+  }
+
+  .advantages__content li {
+    padding: 26px 16px 21px 20px;
+  }
+
+  .advantages__content div {
+    height: 26px;
+    margin-bottom: 19px;
+    margin-left: -3px;
+  }
+
+  .advantages__content svg {
+    -webkit-transform: scale(0.85);
+    -ms-transform: scale(0.85);
+    transform: scale(0.85);
   }
 
   .advantages__content h3 {
@@ -1292,6 +1452,17 @@ button,
     .page-header {
       background-image: -webkit-image-set(url("../img/page-header-tablet@2x.webp") 1x);
       background-image: image-set(url("../img/page-header-tablet@2x.webp") 1x);
+    }
+}
+
+  .advantages {
+    background-image: url("../img/advantages-tablet@2x.jpg");
+  }
+
+@supports ((background-image: -webkit-image-set(url("../img/advantages-tablet@2x.webp") 1x)) or (background-image: image-set(url("../img/advantages-tablet@2x.webp") 1x))) {
+    .advantages {
+      background-image: -webkit-image-set(url("../img/advantages-tablet@2x.webp") 1x);
+      background-image: image-set(url("../img/advantages-tablet@2x.webp") 1x);
     }
 }
 }
@@ -1361,6 +1532,10 @@ button,
     transition: right 0.3s ease;
   }
 
+  .menu.is-open {
+    right: 0;
+  }
+
   .nav--page-header {
     display: block;
     margin-top: 0;
@@ -1416,9 +1591,69 @@ button,
     font-size: 16px;
   }
 
+  .about {
+    padding-top: 57px;
+    padding-bottom: 65px;
+  }
+
+  .about__content {
+    display: block;
+  }
+
+  .about__info {
+    margin-bottom: 33px;
+  }
+
   .about__info b {
     font-size: 24px;
-    line-height: 36px;
+    line-height: 34px;
+  }
+
+  .about__photo {
+    width: 290px;
+    height: 186px;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+
+  .about__photo img {
+    -webkit-transform: translate(calc(-50% + 5px), calc(-50%)) scale(1.03);
+    -ms-transform: translate(calc(-50% + 5px), calc(-50%)) scale(1.03);
+    transform: translate(calc(-50% + 5px), calc(-50%)) scale(1.03);
+  }
+
+  .advantages {
+    padding-top: 58px;
+    padding-bottom: 65px;
+    background-image: url("../img/advantages-mobile.jpg");
+  }
+
+@supports ((background-image: -webkit-image-set(url("../img/advantages-mobile.webp") 1x)) or (background-image: image-set(url("../img/advantages-mobile.webp") 1x))) {
+    .advantages {
+      background-image: -webkit-image-set(url("../img/advantages-mobile.webp") 1x);
+      background-image: image-set(url("../img/advantages-mobile.webp") 1x);
+    }
+}
+
+  .advantages__content h2 {
+    margin-bottom: 30px;
+  }
+
+  .advantages__content ul {
+    display: block;
+  }
+
+  .advantages__content li {
+    margin-bottom: 30px;
+  }
+
+  .advantages__content li:last-child {
+    margin-bottom: 0;
+  }
+
+  .advantages__content h3 {
+    width: 173px;
   }
 
   .section h2 {
@@ -1454,6 +1689,17 @@ button,
     .page-header {
       background-image: -webkit-image-set(url("../img/page-header-mobile@2x.webp") 1x);
       background-image: image-set(url("../img/page-header-mobile@2x.webp") 1x);
+    }
+}
+
+  .advantages {
+    background-image: url("../img/advantages-mobile@2x.jpg");
+  }
+
+@supports ((background-image: -webkit-image-set(url("../img/advantages-mobile@2x.webp") 1x)) or (background-image: image-set(url("../img/advantages-mobile@2x.webp") 1x))) {
+    .advantages {
+      background-image: -webkit-image-set(url("../img/advantages-mobile@2x.webp") 1x);
+      background-image: image-set(url("../img/advantages-mobile@2x.webp") 1x);
     }
 }
 }
