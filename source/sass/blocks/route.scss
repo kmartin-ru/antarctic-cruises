@@ -1,10 +1,31 @@
-.route__info {
-  color: $color-alice-blue;
-
-  background-color: $color-tangaroa;
+.route {
+  position: relative;
 }
 
-.route__info h3 {
+.route__title {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+
+  min-height: 49px;
+  padding: 0 30px;
+
+  @include vp-1279 {
+    min-height: 54px;
+    padding: 0 35px;
+  }
+
+  @include vp-767 {
+    min-height: 44px;
+    padding: 0 25px;
+  }
+}
+
+.route__title p {
+  margin: 0;
+
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
@@ -12,9 +33,105 @@
   color: $color-alice-blue;
 }
 
+.route__photo {
+  position: relative;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background: linear-gradient(180deg, $color-tangaroa-0 50%, $color-tangaroa 100%);
+  }
+}
+
+.route img {
+  width: 100%;
+  height: 386px;
+  object-fit: cover;
+
+  @include vp-1279 {
+    height: auto;
+    min-height: 386px;
+  }
+}
+
+.route__wrapper {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+
+  overflow: hidden;
+
+  width: 100%;
+  height: 100%;
+
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    width: 1px;
+  }
+}
+
+.route__wrapper:hover {
+  overflow-y: auto;
+}
+
+.route__wrapper:hover .route__info {
+  transform: translateY(0);
+}
+
+
+.route__info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  min-height: 100%;
+
+  transform: translateY(100%);
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 29px 25px 35px;
+
+  color: $color-alice-blue;
+
+  background-color: $color-tangaroa;
+
+  transition: $trans-default;
+}
+
+.route__info h3 {
+  margin: 0;
+  margin-bottom: 14px;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: $color-alice-blue;
+}
+
+.route__info table {
+  border-collapse: collapse;
+
+  margin-bottom: 20px;
+}
+
 .route__info tr {
   display: flex;
   flex-direction: column;
+  margin-bottom: 12px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .route__info tr *:first-child {
@@ -23,9 +140,15 @@
 }
 
 .route__info td {
+  padding: 0;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   font-family: "Montserrat", "Arial", sans-serif;
   color: $color-quartz;
+}
+
+.route__info button {
+  margin-top: auto;
 }

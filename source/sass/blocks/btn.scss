@@ -1,6 +1,6 @@
 .btn {
-  display: inline-flex;
-  margin: 10px 0;
+  display: block;
+  margin: 0;
   padding: 10px 20px;
 
   font-weight: 600;
@@ -8,6 +8,8 @@
   line-height: 21px;
   font-family: "Montserrat", "Arial", sans-serif;
   color: $color-tangaroa;
+
+  text-align: center;
 
   background-color: $color-alice-blue;
   border: none;

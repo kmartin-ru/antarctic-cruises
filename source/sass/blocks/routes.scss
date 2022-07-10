@@ -1,3 +1,64 @@
 .routes {
+  padding-top: 112px;
+  padding-bottom: 120px;
+
   background-color: $color-alice-blue;
+
+  @include vp-1279 {
+    padding-top: 91px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 59px;
+    padding-bottom: 65px;
+  }
+}
+
+.routes__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 30px;
+  row-gap: 30px;
+
+  @include vp-1279 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.routes__item {
+  @include vp-767 {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.routes__content {
+  padding: 0 15px;
+
+  @include vp-767 {
+    padding: 0 10px;
+  }
+}
+
+.routes__content h2 {
+  margin: 0;
+  margin-bottom: 48px;
+
+  text-align: center;
+
+  @include vp-1279 {
+    margin-bottom: 51px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 30px;
+  }
 }

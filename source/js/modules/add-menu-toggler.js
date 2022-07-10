@@ -72,10 +72,18 @@ const disableFocus = (el) => {
 const enableFocus = (el) => {
   el.removeAttribute('tabindex');
 
-  window.setTimeout(() => {
-    menuLinks[0].focus();
-  }, 300);
+  if (isMobileWidth.matches) {
+    window.setTimeout(() => {
+      menuLinks[0].focus();
+    }, 300);
+  }
 };
+
+if (isAboveMobileWidth.matches) {
+  menuLinks.forEach((el) => {
+    enableFocus(el);
+  });
+}
 
 // menu state togglers
 
@@ -118,6 +126,16 @@ const onMenuLinkClick = () => {
 const onWindowResize = () => {
   if (isAboveMobileWidth.matches && isMenuOpen()) {
     hideMenu();
+  }
+
+  if (isAboveMobileWidth.matches) {
+    menuLinks.forEach((el) => {
+      enableFocus(el);
+    });
+  } else {
+    menuLinks.forEach((el) => {
+      disableFocus(el);
+    });
   }
 };
 
