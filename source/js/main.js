@@ -1,6 +1,8 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import './modules/add-menu-toggler';
+import './modules/add-map';
+import './modules/validate-form';
 
 // ---------------------------------
 

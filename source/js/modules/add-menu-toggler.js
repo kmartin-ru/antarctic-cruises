@@ -1,5 +1,6 @@
 // variables
 
+const MENU_NOJS_CLASS = 'menu--nojs';
 const OPEN_STATE_CLASS = 'is-open';
 const MOBILE_WIDTH = '(max-width: 767px)';
 const ABOVE_MOBILE_WIDTH = '(min-width: 768px)';
@@ -84,6 +85,13 @@ if (isAboveMobileWidth.matches) {
     enableFocus(el);
   });
 }
+
+// nojs
+
+menu.classList.remove(MENU_NOJS_CLASS);
+menuLinks.forEach((el) => {
+  disableFocus(el);
+});
 
 // menu state togglers
 

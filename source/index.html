@@ -15,43 +15,45 @@
   <body>
     <div class="wrapper">
       <header class="page-header">
-        <div class="container">
-          <div class="page-header__content">
-            <nav class="page-nav">
-              <svg class="logo" data-el="to-hide" width="70" height="38" aria-hidden="true" focusable="false">
-                <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
-              </svg>
-              <div class="page-nav__menu  menu" data-el="menu">
-                <svg class="logo  logo--menu" width="70" height="38" aria-hidden="true" focusable="false">
+        <div class="menu  menu--nojs" data-el="menu">
+          <svg class="logo  logo--menu" width="70" height="38" aria-hidden="true" focusable="false">
+            <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
+          </svg>
+          <ul class="nav  nav--page-header">
+            <li class="nav__item">
+              <a href="#advantages" class="nav__link" data-el="menu-link">Преимущества</a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link" data-el="menu-link" data-tabelement>Направления</a>
+            </li>
+            <li class="nav__item">
+              <a href="#routes" class="nav__link" data-el="menu-link" data-tabelement>Ближайшие круизы</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contacts" class="nav__link" data-el="menu-link" data-tabelement>Контакты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-header__wrapper">
+          <div class="container">
+            <div class="page-header__content">
+              <nav class="page-nav">
+                <svg class="logo" data-el="to-hide" width="70" height="38" aria-hidden="true" focusable="false">
                   <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
                 </svg>
-                <ul class="nav  nav--page-header">
-                  <li class="nav__item">
-                    <a href="#advantages" class="nav__link" data-el="menu-link" tabindex="-1">Преимущества</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="#about" class="nav__link" data-el="menu-link" data-tabelement tabindex="-1">Направления</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="#routes" class="nav__link" data-el="menu-link" data-tabelement tabindex="-1">Ближайшие круизы</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="#contacts" class="nav__link" data-el="menu-link" data-tabelement tabindex="-1">Контакты</a>
-                  </li>
-                </ul>
+                <button class="page-nav__toggle  menu-toggle" data-el="menu-button" type="button">
+                  <svg class="menu-toggle__open" width="24" height="14">
+                    <use xlink:href="img/sprite_auto.svg#icon-menu-open"></use>
+                  </svg>
+                  <svg class="menu-toggle__close" width="15" height="15">
+                    <use xlink:href="img/sprite_auto.svg#icon-menu-close"></use>
+                  </svg>
+                </button>
+              </nav>
+              <div class="page-intro" data-el="to-hide">
+                <h1>Круизы в&nbsp;Антарктику</h1>
+                <p>Волшебный мир айсбергов&nbsp;и&nbsp;пингвинов</p>
               </div>
-              <button class="page-nav__toggle  menu-toggle" data-el="menu-button" type="button">
-                <svg class="menu-toggle__open" width="24" height="14">
-                  <use xlink:href="img/sprite_auto.svg#icon-menu-open"></use>
-                </svg>
-                <svg class="menu-toggle__close" width="15" height="15">
-                  <use xlink:href="img/sprite_auto.svg#icon-menu-close"></use>
-                </svg>
-              </button>
-            </nav>
-            <div class="page-intro" data-el="to-hide">
-              <h1>Круизы в&nbsp;Антарктику</h1>
-              <p>Волшебный мир айсбергов&nbsp;и&nbsp;пингвинов</p>
             </div>
           </div>
         </div>
@@ -67,7 +69,10 @@
               </div>
               <div class="about__photo">
                 <!-- 1х: 618x384; 2x: 1235x767 -->
-                <img src="img/about.jpg" srcset="img/about@2x.jpg 2x" width="618" height="384" alt="Компания из трех пингвинов">
+                <picture>
+                  <source type="image/webp" srcset="img/about.webp 1x, img/about@2x.webp 2x">
+                  <img src="img/about.jpg" srcset="img/about@2x.jpg 2x" width="618" height="384" alt="Компания из трех пингвинов">
+                </picture>
               </div>
             </div>
           </div>
@@ -115,8 +120,11 @@
               <div class="routes__list">
                 <article class="routes__item  route">
                   <div class="route__photo">
-                    <!-- 1х: 309x386; 2x: 618x772 -->
-                    <img src="img/route-1.jpg" srcset="img/route-1@2x.jpg 2x" width="260" height="386" alt="">
+                    <picture>
+                      <!-- 1х: 309x386; 2x: 618x772 -->
+                      <source type="image/webp" srcset="img/route-1.webp 1x, img/route-1@2x.webp 2x">
+                      <img src="img/route-1.jpg" srcset="img/route-1@2x.jpg 2x" width="260" height="386" alt="">
+                    </picture>
                   </div>
                   <div class="route__title">
                     <p>Круиз "Астория"</p>
@@ -142,32 +150,17 @@
                           <td>от 11500 $</td>
                         </tr>
                       </table>
-                      <table>
-                        <tr>
-                          <td>Маршрут</td>
-                          <td>Аргентина - Фолклендские острова - Антарктида</td>
-                        </tr>
-                        <tr>
-                          <td>Порт отправления</td>
-                          <td>Ушуайя</td>
-                        </tr>
-                        <tr>
-                          <td>Продолжительность</td>
-                          <td>11 дней</td>
-                        </tr>
-                        <tr>
-                          <td>Цена</td>
-                          <td>от 11500 $</td>
-                        </tr>
-                      </table>
                       <button class="btn" type="button">Забронировать</button>
                     </div>
                   </div>
                 </article>
                 <article class="routes__item  route">
                   <div class="route__photo">
-                    <!-- 1х: 309x386; 2x: 618x772 -->
-                    <img src="img/route-1.jpg" srcset="img/route-1@2x.jpg 2x" width="260" height="386" alt="">
+                    <picture>
+                      <!-- 1х: 309x386; 2x: 618x772 -->
+                      <source type="image/webp" srcset="img/route-8.webp 1x, img/route-8@2x.webp 2x">
+                      <img src="img/route-8.jpg" srcset="img/route-8@2x.jpg 2x" width="260" height="386" alt="">
+                    </picture>
                   </div>
                   <div class="route__title">
                     <p>Круиз "Элайн"</p>
@@ -199,8 +192,11 @@
                 </article>
                 <article class="routes__item  route">
                   <div class="route__photo">
-                    <!-- 1х: 309x386; 2x: 618x772 -->
-                    <img src="img/route-1.jpg" srcset="img/route-1@2x.jpg 2x" width="260" height="386" alt="">
+                    <picture>
+                      <!-- 1х: 309x386; 2x: 618x772 -->
+                      <source type="image/webp" srcset="img/route-3.webp 1x, img/route-3@2x.webp 2x">
+                      <img src="img/route-3.jpg" srcset="img/route-3@2x.jpg 2x" width="260" height="386" alt="">
+                    </picture>
                   </div>
                   <div class="route__title">
                     <p>Круиз "Атлантис"</p>
@@ -232,8 +228,11 @@
                 </article>
                 <article class="routes__item  route">
                   <div class="route__photo">
-                    <!-- 1х: 309x386; 2x: 618x772 -->
-                    <img src="img/route-1.jpg" srcset="img/route-1@2x.jpg 2x" width="260" height="386" alt="">
+                    <picture>
+                      <!-- 1х: 309x386; 2x: 618x772 -->
+                      <source type="image/webp" srcset="img/route-4.webp 1x, img/route-4@2x.webp 2x">
+                      <img src="img/route-4.jpg" srcset="img/route-4@2x.jpg 2x" width="260" height="386" alt="">
+                    </picture>
                   </div>
                   <div class="route__title">
                     <p>Круиз "Одиссей"</p>
@@ -265,8 +264,11 @@
                 </article>
                 <article class="routes__item  route">
                   <div class="route__photo">
-                    <!-- 1х: 309x386; 2x: 618x772 -->
-                    <img src="img/route-1.jpg" srcset="img/route-1@2x.jpg 2x" width="260" height="386" alt="">
+                    <picture>
+                      <!-- 1х: 309x386; 2x: 618x772 -->
+                      <source type="image/webp" srcset="img/route-5.webp 1x, img/route-5@2x.webp 2x">
+                      <img src="img/route-5.jpg" srcset="img/route-5@2x.jpg 2x" width="260" height="386" alt="">
+                    </picture>
                   </div>
                   <div class="route__title">
                     <p>Круиз "Олимпия"</p>
@@ -298,8 +300,11 @@
                 </article>
                 <article class="routes__item  route">
                   <div class="route__photo">
-                    <!-- 1х: 309x386; 2x: 618x772 -->
-                    <img src="img/route-1.jpg" srcset="img/route-1@2x.jpg 2x" width="260" height="386" alt="">
+                    <picture>
+                      <!-- 1х: 309x386; 2x: 618x772 -->
+                      <source type="image/webp" srcset="img/route-6.webp 1x, img/route-6@2x.webp 2x">
+                      <img src="img/route-6.jpg" srcset="img/route-6@2x.jpg 2x" width="260" height="386" alt="">
+                    </picture>
                   </div>
                   <div class="route__title">
                     <p>Круиз "Аврора"</p>
@@ -331,8 +336,11 @@
                 </article>
                 <article class="routes__item  route">
                   <div class="route__photo">
-                    <!-- 1х: 309x386; 2x: 618x772 -->
-                    <img src="img/route-1.jpg" srcset="img/route-1@2x.jpg 2x" width="260" height="386" alt="">
+                    <picture>
+                      <!-- 1х: 309x386; 2x: 618x772 -->
+                      <source type="image/webp" srcset="img/route-7.webp 1x, img/route-7@2x.webp 2x">
+                      <img src="img/route-7.jpg" srcset="img/route-7@2x.jpg 2x" width="260" height="386" alt="">
+                    </picture>
                   </div>
                   <div class="route__title">
                     <p>Круиз "Леонор"</p>
@@ -364,8 +372,11 @@
                 </article>
                 <article class="routes__item  route">
                   <div class="route__photo">
-                    <!-- 1х: 309x386; 2x: 618x772 -->
-                    <img src="img/route-1.jpg" srcset="img/route-1@2x.jpg 2x" width="260" height="386" alt="">
+                    <picture>
+                      <!-- 1х: 309x386; 2x: 618x772 -->
+                      <source type="image/webp" srcset="img/route-8.webp 1x, img/route-8@2x.webp 2x">
+                      <img src="img/route-8.jpg" srcset="img/route-8@2x.jpg 2x" width="260" height="386" alt="">
+                    </picture>
                   </div>
                   <div class="route__title">
                     <p>Круиз "Минион - 1"</p>
@@ -406,22 +417,22 @@
                 <h2>Раннее бронирование</h2>
                 <p>Забронируйте тур за&nbsp;3-6 месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
               </div>
-              <form class="booking__form  booking-form" action="https://echo.htmlacademy.ru" method="post">
+              <form class="booking__form  booking-form" data-el="booking-form" action="https://echo.htmlacademy.ru" method="post">
                 <p>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</p>
                 <div class="booking-form__field">
                   <label class="visually-hidden" for="user-name">Имя</label>
-                  <input id="user-name" type="text" name="name" placeholder="Имя" required>
+                  <input id="user-name" type="text" name="name" placeholder="Имя" required minlength="2">
                 </div>
                 <div class="booking-form__field">
                   <label class="visually-hidden" for="user-tel">Телефон</label>
-                  <input id="user-tel" type="tel" name="tel" placeholder="Телефон" required>
+                  <input id="user-tel" type="tel" name="tel" placeholder="Телефон" required pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$">
                 </div>
                 <div class="booking-form__field  booking-form__field--last">
                   <label class="visually-hidden" for="user-email">Email</label>
                   <input id="user-email" type="email" name="email" placeholder="Email" required>
                 </div>
                 <div class="booking-form__checkbox">
-                  <input class="visually-hidden" id="checkbox-approval" type="checkbox" name="approval" checked>
+                  <input class="visually-hidden" id="checkbox-approval" type="checkbox" name="approval" required checked>
                   <label for="checkbox-approval">Я согласен на обработку моих персональных данных</label>
                 </div>
                 <button class="btn" type="submit">Оставить заявку</button>
@@ -433,9 +444,9 @@
           <div class="container">
             <div class="contacts__content">
               <h2 class="visually-hidden">Контакты</h2>
-              <div class="contacts__map">
-                <img src="https://via.placeholder.com/560x306" width="560" height="306" alt="г. Санкт Петербург, ул. Большая Конюшенная, 19/8">
-              </div>
+              <a class="map" href="https://yandex.ru/maps/-/CCUyZ8xpHC" target="_blank" aria-label="Офис компании находится по адресу г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
+                <div data-el="map"></div>
+              </a>
               <div class="contacts__info">
                 <p>У вас ещё остались вопросы или сомнения? Приезжайте к нам в офис и мы вам все расскажем.</p>
                 <a href="#">
@@ -458,21 +469,21 @@
       <footer class="page-footer">
         <div class="container">
           <div class="page-footer__content">
-            <svg class="logo" width="70" height="38" aria-hidden="true" focusable="false">
+            <svg class="logo  logo--page-footer" width="70" height="38" aria-hidden="true" focusable="false">
               <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
             </svg>
-            <ul class="nav">
+            <ul class="nav  nav--page-footer">
               <li class="nav__item">
-                <a href="#" class="nav__link  nav__link--page-footer">Преимущества</a>
+                <a href="#advantages" class="nav__link  nav__link--page-footer">Преимущества</a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link  nav__link--page-footer">Направления</a>
+                <a href="#about" class="nav__link  nav__link--page-footer">Направления</a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link  nav__link--page-footer">Ближайшие круизы</a>
+                <a href="#routes" class="nav__link  nav__link--page-footer">Ближайшие круизы</a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link  nav__link--page-footer">Контакты</a>
+                <a href="#contacts" class="nav__link  nav__link--page-footer">Контакты</a>
               </li>
             </ul>
             <ul class="socials">
@@ -502,6 +513,7 @@
         </div>
       </footer>
     </div>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=eb57ce53-8e03-4fdb-8961-05674e653572&lang=ru_RU"></script>
     <script src="js/main.min.js"></script>
   </body>
 </html>
