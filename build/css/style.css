@@ -1265,7 +1265,7 @@ button,
   color: #d8d8d9;
 }
 
-.route__info button {
+.route__info a {
   margin-top: auto;
 }
 
@@ -2323,9 +2323,6 @@ button,
   }
 
   .socials {
-    -webkit-transform: none;
-    -ms-transform: none;
-    transform: none;
     -webkit-transform: translateX(-5px);
     -ms-transform: translateX(-5px);
     transform: translateX(-5px);
