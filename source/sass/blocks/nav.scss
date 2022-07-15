@@ -1,23 +1,23 @@
 .nav {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
   margin: 0;
   padding: 0;
-  width: 900px;
+  max-width: 900px;
 
   list-style: none;
 
   @include vp-1279 {
-    width: 550px;
+    max-width: 550px;
   }
 
   @include vp-767 {
-    width: auto;
+    max-width: auto;
   }
 }
 
 .nav--page-header {
+  justify-content: flex-end;
   margin-right: -33px;
 
   @include vp-1279 {
@@ -35,6 +35,15 @@
 
 .menu--nojs .nav--page-header {
   padding-top: 0;
+}
+
+.nav--page-footer {
+  justify-content: flex-start;
+
+  @include vp-767 {
+    display: block;
+    margin-bottom: 22px;
+  }
 }
 
 .nav__item {
@@ -101,12 +110,5 @@
     font-size: 12px;
     line-height: 15px;
     color: $color-alice-blue;
-  }
-}
-
-.nav--page-footer {
-  @include vp-767 {
-    display: block;
-    margin-bottom: 22px;
   }
 }
