@@ -36,6 +36,12 @@
   }
 }
 
+@mixin vp-519 {
+  @media (max-width: $vp-520 - 1) {
+    @content;
+  }
+}
+
 @mixin vp-374 {
   @media (max-width: $vp-375 - 1) {
     @content;
@@ -56,11 +62,11 @@
 //   }
 // }
 
-// @mixin vp-1024 {
-//   @media (min-width: $vp-1024) {
-//     @content;
-//   }
-// }
+@mixin vp-1024 {
+  @media (min-width: $vp-1024) {
+    @content;
+  }
+}
 
 @mixin vp-1280 {
   @media (min-width: $vp-1280) {
@@ -79,6 +85,14 @@
 //     @content;
 //   }
 // }
+
+// Mixed
+
+@mixin vp-1024-and-1279 {
+  @media (min-width: $vp-1024) and (max-width: $vp-1280 - 1) {
+    @content;
+  }
+}
 
 // ---------------------------------
 

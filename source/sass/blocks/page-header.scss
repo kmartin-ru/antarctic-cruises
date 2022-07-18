@@ -11,7 +11,7 @@
     background-image: image-set(url("../img/page-header-desktop.webp") 1x);
   }
 
-  @include vp-1280 {
+  @include vp-1024 {
     @include retina {
       background-image: url("../img/page-header-desktop@2x.jpg");
 
@@ -21,7 +21,7 @@
     }
   }
 
-  @include vp-1279 {
+  @include vp-1023 {
     min-height: 638px;
 
     background-image: url("../img/page-header-tablet.jpg");
@@ -62,7 +62,7 @@
   padding-top: 35px;
   padding-bottom: 35px;
 
-  @include vp-1279 {
+  @include vp-1023 {
     padding-top: 30px;
     padding-bottom: 30px;
   }

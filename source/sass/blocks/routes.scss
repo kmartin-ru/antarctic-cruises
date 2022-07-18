@@ -4,7 +4,7 @@
 
   background-color: $color-alice-blue;
 
-  @include vp-1279 {
+  @include vp-1023 {
     padding-top: 91px;
     padding-bottom: 100px;
   }
@@ -21,22 +21,16 @@
   column-gap: 30px;
   row-gap: 30px;
 
-  @include vp-1279 {
+  @include vp-1024-and-1279 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include vp-1023 {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @include vp-767 {
-    display: block;
-  }
-}
-
-.routes__item {
-  @include vp-767 {
-    margin-bottom: 30px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
+  @include vp-519 {
+    grid-template-columns: auto;
   }
 }
 
@@ -54,7 +48,7 @@
 
   text-align: center;
 
-  @include vp-1279 {
+  @include vp-1023 {
     margin-bottom: 51px;
   }
 

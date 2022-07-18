@@ -1,5 +1,5 @@
-const DESKTOP_WIDTH = '(min-width: 1366px)';
-const TABLET_WIDTH = '(min-width: 768px) and (max-width: 1365px)';
+const DESKTOP_WIDTH = '(min-width: 1024px)';
+const TABLET_WIDTH = '(min-width: 768px) and (max-width: 1023px)';
 const MOBILE_WIDTH = '(max-width: 767px)';
 const isDesktopWidth = window.matchMedia(DESKTOP_WIDTH);
 const isTabletWidth = window.matchMedia(TABLET_WIDTH);
@@ -99,6 +99,10 @@ function init() {
   // remove copyright
 
   const copyright = document.querySelector('.ymaps-2-1-79-copyrights-pane');
+  const copyrightLink = document.querySelector('.ymaps-2-1-79-copyright__link');
+  const copyrightLogo = document.querySelector('.ymaps-2-1-79-copyright__logo');
 
   copyright.classList.add('visually-hidden');
+  copyrightLink.setAttribute('tabindex', -1);
+  copyrightLogo.setAttribute('tabindex', -1);
 }

@@ -7,7 +7,7 @@
 
   list-style: none;
 
-  @include vp-1279 {
+  @include vp-1023 {
     max-width: 550px;
   }
 
@@ -20,7 +20,7 @@
   justify-content: flex-end;
   margin-right: -33px;
 
-  @include vp-1279 {
+  @include vp-1023 {
     margin-right: -23px;
   }
 
@@ -49,7 +49,7 @@
 .nav__item {
   margin-right: 33px;
 
-  @include vp-1279 {
+  @include vp-1023 {
     margin-right: 23px;
   }
 }
@@ -79,7 +79,7 @@
   font-family: "Montserrat", "Arial", sans-serif;
   color: $color-alice-blue;
 
-  @include vp-1279 {
+  @include vp-1023 {
     font-size: 14px;
     line-height: 17px;
   }
@@ -101,7 +101,7 @@
 }
 
 .nav__link--page-footer {
-  @include vp-1279 {
+  @include vp-1023 {
     font-size: 12px;
     line-height: 15px;
   }

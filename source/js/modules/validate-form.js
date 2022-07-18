@@ -1,5 +1,6 @@
 const bookingForm = document.querySelector('[data-el="booking-form"]');
 const inputTel = bookingForm.querySelector('[type="tel"]');
+const inputEmail = bookingForm.querySelector('[type="email"]');
 
 inputTel.addEventListener('invalid', () => {
   if (inputTel.validity.patternMismatch) {
@@ -20,4 +21,25 @@ inputTel.addEventListener('input', () => {
   }
 
   inputTel.reportValidity();
+});
+
+inputEmail.addEventListener('invalid', () => {
+  if (inputEmail.validity.patternMismatch) {
+    inputEmail.setCustomValidity('Введите почту в формате X@X.XX');
+  } else {
+    inputEmail.setCustomValidity('');
+  }
+});
+
+inputEmail.addEventListener('input', () => {
+  const emailMask = /.+@.+\..+/;
+  const isEmailMatches = emailMask.test(inputEmail.value);
+
+  if (!isEmailMatches) {
+    inputEmail.setCustomValidity('Введите почту в формате X@X.XX');
+  } else {
+    inputEmail.setCustomValidity('');
+  }
+
+  inputEmail.reportValidity();
 });

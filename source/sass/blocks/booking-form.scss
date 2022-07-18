@@ -3,7 +3,7 @@
 
   background-color: $color-tangaroa;
 
-  @include vp-1279 {
+  @include vp-1023 {
     width: 403px;
   }
 
@@ -123,6 +123,14 @@
     &::after {
       left: 4px;
     }
+  }
+}
+
+.booking-form__checkbox input:hover + label,
+.booking-form__checkbox input:focus + label {
+  &::before {
+    outline: 1px solid $color-alice-blue;
+    outline-offset: 2px;
   }
 }
 

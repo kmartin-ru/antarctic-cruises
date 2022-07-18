@@ -6,7 +6,7 @@
 
   box-shadow: inset 0 4px 4px $color-default-black-25;
 
-  @include vp-1279 {
+  @include vp-1023 {
     padding-top: 91px;
     padding-bottom: 94px;
 
@@ -24,7 +24,7 @@
   grid-template-columns: 1fr min-content;
   column-gap: 88px;
 
-  @include vp-1279 {
+  @include vp-1023 {
     column-gap: 30px;
   }
 
@@ -36,7 +36,7 @@
 .about__info {
   padding-top: 57px;
 
-  @include vp-1279 {
+  @include vp-1023 {
     padding-top: 0;
   }
 
@@ -48,7 +48,7 @@
 .about__info *:first-child {
   margin-bottom: 22px;
 
-  @include vp-1279 {
+  @include vp-1023 {
     margin-bottom: 15px;
   }
 }
@@ -62,7 +62,7 @@
   font-family: "Montserrat", "Arial", sans-serif;
   color: $color-tangaroa;
 
-  @include vp-1279 {
+  @include vp-1023 {
     font-size: 26px;
     line-height: 36px;
   }
@@ -91,7 +91,7 @@
 
   overflow: hidden;
 
-  @include vp-1279 {
+  @include vp-1023 {
     width: 324px;
     height: 264px;
 
@@ -113,7 +113,7 @@
 
   transform: translate(calc(-50% - 30px), calc(-50% + 5px)) scale(1.1);
 
-  @include vp-1279 {
+  @include vp-1023 {
     transform: translate(calc(-50% + 7px), calc(-50% - 1px)) scale(1.31);
   }
 
