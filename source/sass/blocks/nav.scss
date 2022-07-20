@@ -42,7 +42,7 @@
 
   @include vp-767 {
     display: block;
-    margin-bottom: 22px;
+    margin-bottom: 3px;
   }
 }
 
@@ -69,6 +69,10 @@
   @include vp-767 {
     margin-right: 0;
     margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 

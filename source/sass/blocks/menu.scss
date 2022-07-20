@@ -12,6 +12,7 @@
     top: 0;
     right: -89.06%;
     z-index: 2;
+    overflow-y: auto;
 
     width: 89.06%;
     height: 100vh;
@@ -23,6 +24,12 @@
     background-color: $color-alice-blue;
 
     transition: right $trans-default;
+
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      width: 1px;
+    }
   }
 }
 

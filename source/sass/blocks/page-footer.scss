@@ -15,10 +15,18 @@
 }
 
 .page-footer__content {
-  display: flex;
+  display: grid;
+  grid-template-columns: 70px 750px 1fr;
+  column-gap: 40px;
   align-items: center;
 
+  @include vp-1023 {
+    grid-template-columns: 38px 470px 1fr;
+    column-gap: 25px;
+  }
+
   @include vp-767 {
-    display: block;
+    grid-template-columns: auto;
+    row-gap: 21px;
   }
 }

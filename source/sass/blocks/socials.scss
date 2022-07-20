@@ -1,24 +1,24 @@
 .socials {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
-  align-self: flex-end;
+  justify-self: flex-end;
   margin: 0;
   padding: 0;
-  margin-left: auto;
 
   list-style: none;
 
-  @include vp-1023 {
-    transform: translateY(5px);
-  }
+  transform: translateY(3px);
 
   @include vp-767 {
-    transform: translateX(-5px);
+    justify-self: flex-start;
+    transform: translateX(-7px);
   }
 }
 
 .socials li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-right: 28px;
 
   &:last-child {
@@ -28,6 +28,12 @@
   @include vp-1023 {
     margin-right: 23px;
   }
+}
+
+.socials a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .socials svg {

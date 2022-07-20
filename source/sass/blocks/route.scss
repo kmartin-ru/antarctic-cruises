@@ -73,6 +73,8 @@
 
   scrollbar-width: none;
 
+  cursor: pointer;
+
   &::-webkit-scrollbar {
     width: 1px;
   }
@@ -84,7 +86,8 @@
 }
 
 .route__wrapper:hover .route__info,
-.route__wrapper:focus-within .route__info {
+.route__wrapper:focus-within .route__info,
+.route__wrapper.is-open .route__info {
   transform: translateY(0);
 }
 

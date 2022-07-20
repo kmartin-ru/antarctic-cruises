@@ -1,3 +1,5 @@
+import '../utils/scroll-lock';
+
 // variables
 
 const MENU_NOJS_CLASS = 'menu--nojs';
@@ -33,6 +35,8 @@ const createOverlay = () => {
   document.body.style.overflowY = 'hidden';
 
   menuOverlay.addEventListener('click', hideMenu);
+
+  window.scrollLock.disableScrolling();
 };
 
 const removeOverlay = () => {
@@ -42,6 +46,8 @@ const removeOverlay = () => {
   document.body.style.overflowY = 'auto';
 
   menuOverlay.removeEventListener('click', hideMenu);
+
+  window.scrollLock.enableScrolling();
 };
 
 // menu state checker

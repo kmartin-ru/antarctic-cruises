@@ -3,6 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import './modules/add-menu-toggler';
 import './modules/add-map';
 import './modules/validate-form';
+import './modules/add-taps-on-ios';
 
 // ---------------------------------
 
